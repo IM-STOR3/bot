@@ -163,7 +163,7 @@ switch(command) {
 const more = String.fromCharCode(8206)
 const strip_ny = more.repeat(4001)
 var footer_nya =`Creator by - ${setting.ownerName}`
-	let menu = `━━━━━[ 𝙈𝙖𝙖𝙗𝙪𝙜-𝙈𝙙 ]━━━━━
+	let menu = `━━━━━[ 𝘽𝙊𝙏 - 𝙈𝙙 ]━━━━━
 
 
 ┏━━━『 𝘿𝘼𝙏𝘼 𝘽𝙊𝙏 』━━━━━◧
@@ -171,7 +171,7 @@ var footer_nya =`Creator by - ${setting.ownerName}`
 ┣» ᴄʀᴇᴀᴛᴏʀ : @${setting.kontakOwner}
 ┣» ʙᴏᴛ ɴᴀᴍᴇ : ${setting.botName}
 ┣» ᴏᴡɴᴇʀ ɴᴀᴍᴇ : ${setting.ownerName} 
-┣» ʀᴜɴɴɪɴɢ : ᴘᴀɴᴇʟ 
+┣» ʀᴜɴɴɪɴɢ : ᴀʀмʙιᴀɴ
 ┃
 ┗━━━━━━━━━━━━━━━━━━◧
 ┏━━━━『 𝙇𝙞𝙨𝙩 𝙈𝙚𝙣𝙪 』━━━━◧
@@ -179,16 +179,14 @@ var footer_nya =`Creator by - ${setting.ownerName}`
 ┣» .mainmenu
 ┣» .owmermenu
 ┣» .grupmenu
-┃
 ┣» .listproduk
-┣» .script
 ┣» .owner
 ┣» .donasi
 ┗━━━━━━━━━━━━━━━━━━◧`
 let btn_menu = [
 {buttonId: '#listproduk', buttonText: {displayText: '️𝗟𝗜𝗦𝗧 𝗣𝗥𝗢𝗗𝗨𝗞'}, type: 1},
 {buttonId: '#mainmenu', buttonText: {displayText: '️𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨'}, type: 1},
-{buttonId: '#sc', buttonText: {displayText: '️𝗦𝗖𝗥𝗜𝗣𝗧'}, type: 1},
+////{buttonId: '#sc', buttonText: {displayText: '️𝗦𝗖𝗥𝗜𝗣𝗧'}, type: 1},
 
 ]
 ramz.sendMessage(from, {text: menu, buttons: btn_menu, footer: footer_nya, mentions: [setting.ownerNumber, sender]}, {quoted: fkontak})
@@ -199,13 +197,9 @@ case 'mainmenu':{
 ┏━━━━『 𝙈𝙖𝙞𝙣 𝙈𝙚𝙣𝙪 』━━━━◧
 ┃
 ┣» .produk
-┣» .listproduk
 ┣» .donasi
-┣» .ping
-┣» .test
-┣» .pembayaran 
-┣» .bayar
-┣» .script
+┣» .pembayaran
+┣» .qris
 ┃
 ┗━━━━━━━━━━━━━━━━━━◧`
 ramz.sendMessage(from, {text: menu}, {quoted: fkontak})
@@ -251,7 +245,7 @@ const strip_ny = more.repeat(4001)
 var footer_nya =`Creator by - ${setting.ownerName}`
 let tampilan_nya = `Hallo Kak..👋
 Saya adalah sistem Rancangan
-Dari *Ramaa gnnz*.
+Dari *IM STORE*.
 
 Berikut List produk Kami yah kak🙏,
 Jangan Lupa untuk order 👍
@@ -261,15 +255,16 @@ ramz.sendMessage(from,
 buttonText: "List Produk",
 sections: [{title: "━━━━━━━━━━━━[ 𝗧𝗢𝗣 𝗨𝗣 ]━━━━━━━━━━━━",
 rows: [
-{title: "💎 𖢉 𝙁𝙧𝙚𝙚 𝙁𝙞𝙧𝙚", rowId: prefix+"ff", description: "Menampilkan List Topup Free fire"},
-{title: "💎 𖢉 𝙈𝙤𝙗𝙞𝙡𝙚 𝙇𝙚𝙜𝙚𝙣𝙙", rowId: prefix+"ml", description: "Menampilkan List Topup ML"},
-{title: "💎 𖢉 𝘾𝙝𝙞𝙥𝙨 𝘿𝙤𝙢𝙞𝙣𝙤", rowId: prefix+"chips", description: "Menampilkan List Chips Domino"}]},
-{title: "━━━━━━━━━━━━[ 𝗠𝗘𝗡𝗝𝗨𝗔𝗟 ]━━━━━━━━━━━━",
-rows: [
-{title: "📮 𖢉 Donasi", rowId: prefix+"donasi", description: "Donasi Kepada Bot"},
-{title: "📮 𖢉 YouTube", rowId: prefix+"yt", description: "YouTube Admin"},
-{title: "📮 𖢉 GroupWa", rowId: prefix+"gc", description: "Group Admin"},
-{title: "📮 𖢉 Script", rowId: prefix+"scbot", description: "Script bot Store & Create Panel"}]},
+{title: "💎 𖢉 🅕🅡🅔🅔 🅕🅘🅡🅔", rowId: prefix+"ff", description: "List Topup Free fire"},
+{title: "💎 𖢉 🅜🅞🅑🅘🅛🅔 🅛🅔🅖🅔🅝🅓🅢", rowId: prefix+"ml", description: "List Topup ML"},
+{title: " ⸕✍ 𖢉 🅒🅞🅝🅥🅔🅡🅣 🅢🅐🅛🅓🅞 ", rowId: prefix+"convert", description: "convert saldo dana,ovo,gopay,link aja,shoppe pay"}]},
+////{title: "━━━━━━━━━━━━[ 𝗠𝗘𝗡𝗝𝗨𝗔𝗟 ]━━━━━━━━━━━━",
+////rows: [
+/////{title: "▶️ 𖢉 YouTube Prem", rowId: prefix+"yt", description: "Jual YouTube prem 4 bln"},
+/////{title: "▶️ 𖢉 Donasi", rowId: prefix+"donasi", description: "Donasi Kepada Bot"},
+//////{title: "▶️ 𖢉 GroupWa", rowId: prefix+"gc", description: "Stock Group"},
+/////{title: "▶️ 𖢉 Script", rowId: prefix+"scbot", description: "Script bot Store"}]},
+
 ],
 footer: footer_nya,
 mentions:[setting.ownerNumber, sender]})
@@ -282,25 +277,23 @@ reply('*Itu kak nomor owner ku, Chat aja gk usah malu😆*')
 }
 break
 case 'yt':
-case 'youtube':
+//////case 'youtube':///////
 	ramz.sendMessage(from, 
-{text: `Jangan Lupa Subscriber yah kak😉🙏
-*Link* : https://youtube.com/@ramaagnnz961?si=EnSIkaIECMiOmarE`},
+{text: `*youtube premium 4 bulan 
+harga 8k minat? chat own!>083119591196*`},
 {quoted: msg})
 break
 case 'ig':
 case 'instagram':
-	ramz.sendMessage(from, {text: `Admin Kurang ngurus ig uyy Jadi subscribe aja YouTube admin\n\nLink https://youtube.com/@ramaagnnz961?si=EnSIkaIECMiOmarE`},
+	ramz.sendMessage(from, {text: `ini kack > @ibram_yoweslah`},
 {quoted: msg})
 break
 case 'gc':
 case 'group':
 case 'grup':
-case 'groupadmin':
+/////case 'groupadmin':////
 	ramz.sendMessage(from, 
-{text: `*Group Ramaa Gnnz*\n
-Group1 :https://chat.whatsapp.com/FxhPGFS8ZhL9E4nhk1X7Rg
-Group2 : https://chat.whatsapp.com/JYjwm7vfjdB69FrnyuwoEF`},
+{text: `*Chat own nya, stock nga nya biar tau!>083119591196*`},
 {quoted: msg})
 break
 case 'donasi': case 'donate':{
@@ -308,10 +301,9 @@ let tekssss = `───「  *DONASI*  」────
 
 *Payment donasi💰* 
 
-- *Dana :* 085806240904
+- *Dana :* 083119591196
 - *Gopay :*  Scan qr di atas
 - *Ovo :* Scan qr di atas
-- *Saweria :* https://saweria.co/Ramaa1
 - *Qris :* Scan qr di atas
 
 berapapun donasi dari kalian itu sangat berarti bagi kami 
@@ -335,12 +327,12 @@ case 'pembayaran':
 case 'bayar':{
 let tekssss = `───「  *PAYMENT*  」────
 
-- *Dana :* 085806240904
+- *Dana :* 083119591196
 - *Gopay :*  Scan qr di atas
 - *Ovo :* Scan qr di atas
 - *Qris :* Scan qr di atas
 
-OK, thanks udah order di *Ramaa gnzz*
+OK, thanks udah order di *IM STORE*
 `
 ramz.sendMessage(from, { image: fs.readFileSync(`./gambar/qris.jpg`),
  caption: tekssss, 
@@ -356,43 +348,41 @@ let teq =`🛒𝗟𝗜𝗦𝗧 𝗧𝗢𝗣𝗨𝗣
 
 ❗𝐃𝐈𝐀𝐌𝐎𝐍𝐃 𝐌𝐋❗
 ✅ 𝗩𝗜𝗔 (𝗜𝗗)
-💎86 Rp19.000
+💎28 Rp8.000
+💎42 Rp11.000
+💎56 Rp15.000
+💎70 Rp18.000
+💎86 Rp19.500
+💎114 Rp27.000
+💎140 Rp36.000
 💎172 Rp39.000
-💎257 Rp59.000
+💎257 Rp58.000
+💎285 Rp66.000
 💎344 Rp78.000
+💎372 Rp85.000
 💎429 Rp98.000
-💎514 Rp118.000
-💎600 Rp138.000
-💎706 Rp158.000
-💎878 Rp197.000
-💎963 Rp217.000
-💎1050 Rp236.000
-💎1220 Rp276.000
-💎1412 Rp316.000
-💎1669 Rp375.000
-💎1926 Rp434.000
-💎2195 Rp474.000
-💎2539 Rp553.000
-💎2901 Rp633.000
-💎3073 Rp672.000
-💎3688 Rp792.000
-💎4032 Rp871.000
-💎4394 Rp950.000
-💎5100 Rp1.108.000
-💎5532 Rp1.189.000
-💎6238 Rp1.347.000
-💎7727 Rp1.664.000
-💎9288 Rp1.977.000
-
-𝗢𝗣𝗘𝗡 𝗥𝗘𝗦𝗦𝗘𝗟𝗘𝗥 ,𝗧𝗢𝗣 𝗨𝗣 𝗗𝗔𝗡 𝗣𝗥𝗢𝗠𝗢 𝗟𝗔𝗜𝗡𝗡𝗬𝗔
+💎514 Rp117.000
+💎556 Rp127.000
+💎570 Rp131.000
+💎600 Rp136.000
+💎706 Rp156.000
+💎720 Rp159.000
+💎878 Rp195.000
+💎963 Rp215.000
+💎977 Rp218.000
+💎1135 Rp253.000
+💎1163 Rp260.000
+💎1412 Rp311.000
+💎1454 Rp322.000
+💎2195 Rp467.000
 
 𝗥𝗘𝗞𝗕𝗘𝗥 𝗢𝗡 ✅
 ❗ 𝐎𝐑𝐃𝐄𝐑𝐀𝐍 𝐀𝐊𝐀𝐍 𝐃𝐈 𝐏𝐑𝐎𝐒𝐄𝐒 𝐒𝐄𝐓𝐄𝐋𝐀𝐇 𝐏𝐄𝐌𝐁𝐀𝐘𝐀𝐑𝐀𝐍❗
 
-Minat Sewabot?
-Pencet button Di bawah`
+Kirim ID & SERVER sebelum klik buy
+Jangan lupa juga bukti tf nya ya!!`
 let btn_menu = [
-{buttonId: `${prefix}proses`, buttonText: { displayText: 'BUYðŸ›’' }, type: 1 },
+{buttonId: `${prefix}proses`, buttonText: { displayText: 'BUY🛒' }, type: 1 },
 ]
 ramz.sendMessage(from,
 {text: teq,
@@ -405,24 +395,42 @@ case 'freefire':{
 let teq =`*FREE FIRE*
 la
 ✅UID TOPUP LIST 💥
-📌115💎-Rs.135
-📌240💎-Rs.250
-📌355💎-Rs.340
-📌480💎-Rs.460
-📌610💎-Rs.560
-📌830💎-Rs.765
-🪢1090💎-Rs .1020
-📌1240💎-Rs.1,110
-📌1850💎-Rs.1,610
-📌2530💎-Rs.2,220
-     💥Membership💥
-📌weekly-Rs.250.
-📌Monthly-Rs.1,110.
-📌Level up pass-270.
+📌10💎-Rp.2.000
+📌20💎-Rp.3.000
+📌30💎-Rp.5.000
+📌40💎-Rp.6.000
+📌55💎-Rp.7.000
+📌70💎-Rp.9.000
+📌80💎-Rp.11.000
+📌90💎-Rp.12.000
+📌100💎-Rp.13.000
+📌120💎-Rp.16.000
+📌130💎-Rp.17.500
+📌140💎-Rp.18.000
+📌150💎-Rp.20.000
+📌160💎-Rp.21.000
+📌190💎-Rp.25.000
+📌200💎-Rp.26.000
+📌210💎-Rp.27.000
+📌250💎-Rp.33.000
+📌280💎-Rp.36.000
+📌300💎-Rp.39.000
+📌355💎-Rp.45.000
+📌400💎-Rp.51.000
+📌475💎-Rp.61.000
+📌500💎-Rp.64.000
+📌545💎-Rp.70.000
+📌600💎-Rp.77.000
+📌720💎-Rp.90.000
+📌800💎-Rp.100.000
+📌860💎-Rp.108.000
+📌930💎-Rp.116.000
+📌1000💎-Rp.125.000
+📌1075💎-Rp.334.000
+📌1450💎-Rp.180.500
 
-
-*Jika setuju untuk membeli*
-Klik button di bawah!!`
+Kirim ID sebelum klik buy
+Jangan lupa juga bukti tf nya ya!!`
 let btn_menu = [
 {buttonId: `${prefix}proses`, buttonText: { displayText: 'BUY🛒' }, type: 1 },
 ]
@@ -432,32 +440,82 @@ buttons: btn_menu},
 {quoted: msg})
 }
 break
-case 'chips':
-case 'chipsdomino':{
+case 'convert':
+case 'cs':{
 let teq =`
-*LIST CHIP KUNING HIGS DOMINO VIA ID*
-100M🪙6.500
-200M🪙13.000
-300M🪙19.500
-400M🪙26.500
-500M🪙32.500
-600M🪙39.000
-700M🪙45.500
-800M🪙52.500
-900M🪙58.500
-1B     🪙63.000
-5B     🪙315.000
-10B   🪙630.000
-*Chip ungu 1B Rp68.000*
+*JASA CONVERT SALDO*
+✔✔☤ALL TRX ON☤✔✔
+✍🅣🅐🅧 ➳Rp.800
 
-*Proses 1-10menit*
-*-salah penulis ID GK komplain*
-*-proses = no cancel*
-⚠️ TERIMA BONGKAR CHAT ADMIN ⚠️
+ꔷ🅳🅰🅽🅰 ꔷ
+➳Rp.10.000
+➳Rp.15.000
+➳Rp.20.000
+➳Rp.25.000
+➳Rp.30.000
+➳Rp.35.000
+➳Rp.40.000
+➳Rp.45.000
+➳Rp.50.000
+➳Rp.55.000
+➳Rp.60.000
+➳Rp.65.000
+➳Rp.70.000
+➳Rp.75.000
+➳Rp.80.000
+➳Rp.85.000
+➳Rp.90.000
+➳Rp.100.000
 
+>khusus ovo saya ambil tax ⸕ 1k
+ꔷ🅾🆅🅾 ꔷ
+➳Rp.10.000
+➳Rp.15.000
+➳Rp.20.000
+➳Rp.25.000
+➳Rp.50.000
+➳Rp.75.000
+➳Rp.100.000
 
-*Jika setuju untuk membeli*
-Klik button di bawah!!`
+ꔷ🅶🅾🅿🅰🆈 ꔷ
+➳Rp.10.000
+➳Rp.15.000
+➳Rp.20.000
+➳Rp.25.000
+➳Rp.30.000
+➳Rp.40.000
+➳Rp.50.000
+➳Rp.60.000
+➳Rp.70.000
+➳Rp.80.000
+➳Rp.90.000
+➳Rp.100.000
+
+ꔷ🅻🅸🅽🅺🅰🅹🅰•
+➳Rp.10.000
+➳Rp.15.000
+➳Rp.20.000
+➳Rp.30.000
+➳Rp.50.000
+➳Rp.70.000
+➳Rp.80.000
+➳Rp.100.000
+
+ꔷ🆂🅷🅾🅿🅿🅴🅿🅰🆈 ꔷ
+➳Rp.10.000
+➳Rp.15.000
+➳Rp.20.000
+➳Rp.25.000
+➳Rp.30.000
+➳Rp.50.000
+➳Rp.60.000
+➳Rp.70.000
+➳Rp.80.000
+➳Rp.90.000
+➳Rp.100.000
+
+*convert saldo menggunakan qris untuk transaksinya ketikan (.qris) lalu akan muncul qris*
+kirim bukti pembayaran lalu klik tombol buy!!`
 let btn_menu = [
 {buttonId: `${prefix}proses`, buttonText: { displayText: 'BUY🛒' }, type: 1 },
 ]
@@ -480,7 +538,7 @@ ramz.sendMessage(`${setting.ownerNumber}`, {text: `*👋HALLO OWNER KU, ADA YANG
 break
 case 'done':{
 if (!isOwner && !fromMe) return reply('Ngapain..?')
-let tek = (`「 *TRANSAKSI BERHASIL* 」\n\n\`\`\`📆 TANGGAL : ${tanggal}\n⌚ JAM     : ${jam}\n✨ STATUS  : Berhasil\`\`\`\n\nTerimakasih Telah order di *Rama Gnnz*\nNext Order ya🙏`)
+let tek = (`「 *TRANSAKSI BERHASIL* 」\n\n\`\`\`📆 TANGGAL : ${tanggal}\n⌚ JAM     : ${jam}\n✨ STATUS  : Berhasil\`\`\`\n\nTerimakasih Telah order di *IM STORE*\nNext Order ya🙏`)
 let btn_menu = [
 {buttonId: `${prefix}aokeguwgw`, buttonText: { displayText: 'OKE THENKS👍' }, type: 1 },
 ]
@@ -628,20 +686,24 @@ title: groupName, rows: arr_rows
 ramz.sendMessage(from, listMsg)
 }
 break
-case 'sc':
-case 'script':
-case 'scbot':
-case 'scriptbot':{
-let teq =`*-----SCRIPT BOT STORE-----*
+case 'qr':
+case 'qris':
+////////case 'scbot'://////
+//case 'scriptbot'://
+{
+let teqs =`*-----IM STORE-----*
+*TOKO MG*
 
-CREATOR SCRIPT : RAMAA GNNZ
-https://youtube.com/@ramaagnnz961
+*DENGAN QRIS TRANSAKSI JAUH LEBIH MUDAH*
+*HARAP UNTUK TIDAK MEMBAGIKAN TF CLONE*
+*ALL TRX NO REFF*
 
-SCRIPT BOT STORE INI BISA KALIAN DAPATKAN DENGAN GRATIS || LINK  https://youtu.be/a63nnKJ3oQ8
-
-JANGAN LUPA UNTUK SUBSCIBE CHANNEL NYA YA KAK TERIMAKASIH`
-ramz.sendMessage(from,
-{text: teq},
+☑QRIS by IM STOREϟ`
+ramz.sendMessage(from, { image: fs.readFileSync(`./gambar/qris.jpg`),
+ caption: teqs,
+footer: `${setting.ownerName} © 2022`},
+////ramz.sendMessage(from,
+////{text: teq},
 {quoted: msg})
 }
 break
